@@ -1,0 +1,11 @@
+version: "3.0"
+services:
+  nginx:
+   image: nginx:alpine
+   container_name: nginx
+   restart: always
+   ports:
+     - "80:80"
+   volumes:
+     - ./nginx/nginx.conf:/etc/nginx/nginx.conf
+     - ./service_1:/usr/share/nginx/html/service_1
